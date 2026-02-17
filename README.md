@@ -20,9 +20,79 @@ It supports full CRUD operations with description and completed status.
 ## 📁 Project Structure
 
 ```
-todo-fullstack/
-├── backend/     # Spring Boot API
-└── frontend/    # React App
+TODO-fullstack/
+│
+├── images/
+│   ├── backend.png.png
+│   ├── createtodoapi.png
+│   ├── deletetodo.jpg
+│   ├── getallapi.jpg
+│   ├── ui.png
+│   └── updatetodo.jpg
+│
+├── todo-backend/
+│   ├── .mvn/
+│   │   └── wrapper/
+│   │       └── maven-wrapper.properties
+│   ├── src/main/
+│   │   ├── java/com/example/todo/
+│   │   │   ├── controller/
+│   │   │   │   └── TodoController.java
+│   │   │   ├── dto/
+│   │   │   │   └── TodoRequest.java
+│   │   │   ├── model/
+│   │   │   │   └── Todo.java
+│   │   │   ├── repository/
+│   │   │   │   └── TodoRepository.java
+│   │   │   ├── service/
+│   │   │   │   └── TodoService.java
+│   │   │   └── TodoApplication.java
+│   │   └── resources/
+│   │       ├── static/
+│   │       ├── templates/
+│   │       └── application.properties
+│   ├── target/
+│   ├── .gitattributes
+│   ├── .gitignore
+│   ├── HELP.md
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   └── pom.xml
+│
+├── todo-frontend/
+│   ├── node_modules/
+│   ├── public/
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   ├── logo192.png
+│   │   ├── logo512.png
+│   │   ├── manifest.json
+│   │   └── robots.txt
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── todoApi.js
+│   │   ├── components/
+│   │   │   ├── TodoForm.css
+│   │   │   ├── TodoForm.js
+│   │   │   ├── TodoItem.css
+│   │   │   ├── TodoItem.js
+│   │   │   └── TodoList.js
+│   │   ├── App.css
+│   │   ├── App.js
+│   │   ├── App.test.js
+│   │   ├── index.css
+│   │   ├── index.js
+│   │   ├── logo.svg
+│   │   ├── reportWebVitals.js
+│   │   └── setupTests.js
+│   ├── .gitignore
+│   ├── package-lock.json
+│   ├── package.json
+│   └── README.md
+│
+├── .gitignore
+└── README.md
+
 ```
 
 ---
@@ -51,7 +121,7 @@ cd backend
 ```
 
 Runs at:
-http://localhost:8080
+http://localhost:8080/api/todos
 
 ---
 
@@ -85,13 +155,13 @@ http://localhost:3000
 
 ### 🔹 Frontend UI
 
-![Todo UI](images/ui.png)
+![Todo UI](images/ui.png.png)
 
 ---
 
 ### 🔹 Get All Todos (Browser)
 
-![Get Todos](images/backend.png)
+![Get Todos](images/backend.png.png)
 
 ---
 
