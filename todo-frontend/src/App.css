@@ -1,0 +1,119 @@
+/* THEME VARIABLES */
+:root {
+  --bg: linear-gradient(135deg, #667eea, #764ba2);
+  --card-bg: #ffffff;
+  --text: #333;
+  --subtext: #666;
+  --border: #ddd;
+  --primary: #667eea;
+}
+
+[data-theme="dark"] {
+  --bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --card-bg: #1e1e1e;
+  --text: #f5f5f5;
+  --subtext: #bdbdbd;
+  --border: #333;
+  --primary: #90caf9;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+/* APP CARD */
+.app-container {
+  background: var(--card-bg);
+  width: 500px;
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: var(--text);
+}
+
+.theme-toggle {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ADD TODO */
+.add-todo {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr auto;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.add-todo input {
+  padding: 11px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.add-todo input::placeholder {
+  color: var(--subtext);
+}
+
+.add-todo button {
+  padding: 0 22px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.filters button {
+  padding: 8px 26px;
+  border-radius: 999px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filters button.active,
+.filters button:hover {
+  background: var(--primary);
+  color: white;
+}
